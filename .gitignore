@@ -1,9 +1,9 @@
 /node_modules
 /public/hot
-/public/storage
+#/public/storage
 /storage/*.key
 /vendor
-.env
+#.env
 .env.backup
 .phpunit.result.cache
 Homestead.json
@@ -15,4 +15,4 @@ yarn-error.log
 
 # Project exclude paths
 /storage/app/
-/storage/framework/
+#/storage/framework/
