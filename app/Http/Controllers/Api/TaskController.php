@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Validator;
 
 class TaskController extends JsonResponseController
 {
-    //
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(Request $request)
     {
         $taskRequest = $request->all();
@@ -29,16 +32,28 @@ class TaskController extends JsonResponseController
             'title' => $request->title,
             'due_date' => $request->due_date,
         ]);
-        return $this->sendPaginateResponse($task->toArray(),'200');
+        return $this->sendResponse($task,"Task created Successfully",201);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function index()
     {
         $tasks = TaskList::where([
             'status' => false,
         ])->orderBy('due_date')->paginate(5);
 
-        return $this->sendPaginateResponse($tasks->toArray(),'201');
-//        return response($tasks->toArray(), 201, ['Content-Type', 'application/json']);
+        return $this->sendPaginateResponse($tasks->toArray(),200);
+    }
+
+
+
+    public function complete(Request $request){
+        //get requested task for DB
+        $task =  TaskList::findorFail($request->id);
+        $task->status = true;
+        $task->save();
+        return $this->sendResponse($task,"Task has been completed.", 201);
     }
 }
