@@ -1,0 +1,1167 @@
+{
+	"info": {
+		"_postman_id": "ce99b89a-8b77-4bcb-adfe-df9b2e062a93",
+		"name": "Todo_App_UD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tasks List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks"
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Tasks List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:22:53 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:22:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-03-04\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T10:09:54.000000Z\",\n                \"updated_at\": \"2022-04-03T10:09:54.000000Z\"\n            },\n            {\n                \"id\": 1,\n                \"title\": \"Provident et vitae id omnis ad. Excepturi mollitia asperiores quia tempore.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Ad et consequatur repellat. Nemo aperiam praesentium at placeat. Optio delectus voluptas ex aut facilis. Maxime libero voluptatem explicabo explicabo ut ut neque.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Dolor impedit non inventore. Culpa dolorem eaque rerum voluptatem vel sit qui. Occaecati dignissimos temporibus possimus qui magni voluptatem.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Deleniti rem non sint. Quis aspernatur earum non inventore debitis minus omnis. Eligendi sed itaque aut consequatur soluta doloremque. Facere minima et eius sit architecto sit accusantium qui.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://localhost/api/tasks?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost/api/tasks?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost/api/tasks?page=2\",\n        \"path\": \"http://localhost/api/tasks\",\n        \"per_page\": 5,\n        \"prev_page_url\": null,\n        \"to\": 5,\n        \"total\": 6\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Tasks List with Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks?page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Tasks List with Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks?page=2",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 08:21:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 08:21:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 2,\n        \"data\": [],\n        \"first_page_url\": \"http://localhost/api/tasks?page=1\",\n        \"from\": null,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks?page=1\",\n        \"links\": [\n            {\n                \"url\": \"http://localhost/api/tasks?page=1\",\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks?page=1\",\n                \"label\": \"1\",\n                \"active\": false\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks\",\n        \"per_page\": 5,\n        \"prev_page_url\": \"http://localhost/api/tasks?page=1\",\n        \"to\": null,\n        \"total\": 4\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "\"this is test of task\"",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2022-04-03",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:80/api/tasks/new",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create New Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "\"this is test of task\"",
+									"type": "text"
+								},
+								{
+									"key": "due_date",
+									"value": "2022-04-03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:80/api/tasks/new",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"new"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:09:54 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:09:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 1,\n    \"data\": {\n        \"title\": \"\\\"this is test of task\\\"\",\n        \"due_date\": \"2022-03-04\",\n        \"updated_at\": \"2022-04-03T10:09:54.000000Z\",\n        \"created_at\": \"2022-04-03T10:09:54.000000Z\",\n        \"id\": 8\n    },\n    \"message\": \"Task created Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update the status of task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/complete?id=3",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"complete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update the status of task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/complete?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:50:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:50:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 1,\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Ad et consequatur repellat. Nemo aperiam praesentium at placeat. Optio delectus voluptas ex aut facilis. Maxime libero voluptatem explicabo explicabo ut ut neque.\",\n        \"due_date\": \"2022-04-11\",\n        \"status\": true,\n        \"deleted_at\": null,\n        \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n        \"updated_at\": \"2022-04-03T10:50:02.000000Z\"\n    },\n    \"message\": \"Task has been completed.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update the status of task which is not available",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/complete?id=100",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"complete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update the status of task which is not available",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/complete?id=100",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:50:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:50:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 0,\n    \"message\": \"Task with id not found.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update the status of task which is not available Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/2",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update the status of task which is not available Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/2",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 08:43:49 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 08:43:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 1,\n    \"data\": [],\n    \"message\": \"Task deleted.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Filter task with title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/filter?title=Provident",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Provident"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Filter task with title",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?title=Provident",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Provident"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:35:33 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:35:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"Provident et vitae id omnis ad. Excepturi mollitia asperiores quia tempore.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				},
+				{
+					"name": "Filter task with title",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?title=english",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "english"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 13:05:56 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 13:05:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 11,\n                \"title\": \"Task Number 5: Practise English Test\",\n                \"due_date\": \"2022-04-12\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T13:04:27.000000Z\",\n                \"updated_at\": \"2022-04-03T13:04:27.000000Z\"\n            },\n            {\n                \"id\": 12,\n                \"title\": \"Task Number 6: Give English Test\",\n                \"due_date\": \"2022-04-13\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T13:04:27.000000Z\",\n                \"updated_at\": \"2022-04-03T13:04:27.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Filter task with due date_ today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/filter?due_date=today",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "due_date",
+							"value": "today"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Filter task with due date_ today",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?due_date=today",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "due_date",
+									"value": "today"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:47:47 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:47:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 5,\n                \"title\": \"Deleniti rem non sint. Quis aspernatur earum non inventore debitis minus omnis. Eligendi sed itaque aut consequatur soluta doloremque. Facere minima et eius sit architecto sit accusantium qui.\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T10:09:36.000000Z\",\n                \"updated_at\": \"2022-04-03T10:09:36.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Filter task with due date_ thisweek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/filter?due_date=this_week",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "due_date",
+							"value": "this_week"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Filter task with due date_ thisweek",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?due_date=this_week",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "due_date",
+									"value": "this_week"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:44:57 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:44:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 4,\n                \"title\": \"Dolor impedit non inventore. Culpa dolorem eaque rerum voluptatem vel sit qui. Occaecati dignissimos temporibus possimus qui magni voluptatem.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Deleniti rem non sint. Quis aspernatur earum non inventore debitis minus omnis. Eligendi sed itaque aut consequatur soluta doloremque. Facere minima et eius sit architecto sit accusantium qui.\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T10:09:36.000000Z\",\n                \"updated_at\": \"2022-04-03T10:09:36.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Filter task with due date_ nextweek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/filter?due_date=next_week",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "due_date",
+							"value": "next_week"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Filter task with due date_ nextweek",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?due_date=next_week",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "due_date",
+									"value": "next_week"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:46:56 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:46:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-04-04\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T10:09:54.000000Z\",\n                \"updated_at\": \"2022-04-03T10:09:54.000000Z\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-04-07\",\n                \"status\": 1,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T08:21:50.000000Z\",\n                \"updated_at\": \"2022-04-03T08:22:21.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Filter task with due date_ overdue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/api/tasks/filter?due_date=overdue",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "due_date",
+							"value": "overdue"
+						}
+					]
+				},
+				"description": "Get the list of todo"
+			},
+			"response": [
+				{
+					"name": "Filter task with due date_ overdue",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/api/tasks/filter?due_date=overdue",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "due_date",
+									"value": "overdue"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:80"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:42:57 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Apr 2022 10:42:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 4,\n                \"title\": \"Dolor impedit non inventore. Culpa dolorem eaque rerum voluptatem vel sit qui. Occaecati dignissimos temporibus possimus qui magni voluptatem.\",\n                \"due_date\": \"2022-04-01\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Deleniti rem non sint. Quis aspernatur earum non inventore debitis minus omnis. Eligendi sed itaque aut consequatur soluta doloremque. Facere minima et eius sit architecto sit accusantium qui.\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-03-31T11:04:26.000000Z\",\n                \"updated_at\": \"2022-03-31T11:04:26.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"\\\"this is test of task\\\"\",\n                \"due_date\": \"2022-04-03\",\n                \"status\": 0,\n                \"deleted_at\": null,\n                \"created_at\": \"2022-04-03T10:09:36.000000Z\",\n                \"updated_at\": \"2022-04-03T10:09:36.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost/api/tasks/filter?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/tasks/filter?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost/api/tasks/filter\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    },\n    \"Content-Type\": \"application/json\"\n}"
+				}
+			]
+		}
+	]
+}
