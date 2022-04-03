@@ -3,50 +3,51 @@
 namespace App\Http\Controllers\Helper;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class JsonResponseController extends Controller
 {
 
-    public function sendPaginateResponse($result, $code= 200){
+    /**
+     * @param $result
+     * @param $code
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function sendPaginateResponse($result, $code = 200)
+    {
         $response = [
-            'data'    => $result,
-            'Content-Type'=> 'application/json'
+            'data' => $result,
+            'Content-Type' => 'application/json'
         ];
         return response()->json($response, $code);
     }
 
-    public function sendResponse($result, $message, $code = 200)
+    /**
+     * @param $result
+     * @param $message
+     * @param $code
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function sendResponse($result, $message, $code)
     {
         $response = [
             'result' => 1,
-            'data'    => $result,
+            'data' => $result,
             'message' => $message,
         ];
         return response()->json($response, $code);
     }
 
-    public function sendEmptyResponse($result, $message)
+    /**
+     * @param $message
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function sendError($message)
     {
         $response = [
             'result' => 0,
-            'data'    => $result,
             'message' => $message,
         ];
-        return response()->json($response, 200);
+        return response()->json($response, 404);
     }
-
-    public function sendError($error, $errorMessages = [], $code = 404)
-    {
-        $response = [
-            'result' => 2,
-            'message' => $error,
-        ];
-        if(!empty($errorMessages)){
-            $response['data'] = $errorMessages;
-        }
-        return response()->json($response, $code);
-    }
-
 
 }

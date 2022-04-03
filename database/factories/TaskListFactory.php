@@ -23,11 +23,12 @@ class TaskListFactory extends Factory
     {
         return [
             'title' => $this->faker->text(),
-            'due_date' => now()->add(1, 'day')->format('Y-m-d'),
+            'due_date' => now()->add(rand(0, 14), 'day')->format('Y-m-d'),
             'status' => false,
             'deleted_at' => null,
             'created_at' => now(),
             'updated_at' => now(),
         ];
     }
+
 }

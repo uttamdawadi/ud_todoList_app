@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,13 +19,6 @@ Route::prefix('tasks')->group(function (){
     Route::post('/new', 'App\Http\Controllers\Api\TaskController@store');
     Route::put('/complete', 'App\Http\Controllers\Api\TaskController@complete');
     Route::delete('/{task_id}', 'App\Http\Controllers\Api\TaskController@delete');
-
+    Route::get('/filter', 'App\Http\Controllers\Api\TaskController@filter');
 });
 
-
-//Route::post('/tasks', [TaskController::class, 'store']);
-//Route::post('/tasks', [TaskController::class, 'store']);
-//Route::get('/tasks', 'App\Http\Controllers\Api\TaskController@index');
-//Route::put('/tasks/complete', [TaskController::class, 'complete']);
-//Route::delete('/tasks/{task}', [TaskController::class, 'delete']);
-//Route::get('/tasks/filter', [TaskController::class, 'filter']);
